@@ -1,5 +1,5 @@
 <template>
-    <div style="margin:0;padding:0;height:100%;width:100%;">
+    <div style="height:100%;width:100%;overflow:hidden;">
         <div class="search">
             <el-input
                 placeholder="请输入搜索的关键字..."
@@ -31,7 +31,7 @@
             </el-carousel>
         </div>
     </div>
-    <section style="width:100%;height:2000px;background:#ecf0f1;">
+    <section>
     <div class="productList">
         <el-card v-for="(product,index) in product" :key="index" class="product" :body-style="{ padding: '0px' }" shadow="hover" >
                 <div style="height:250px;width:250px;overflow:hidden;" @click="productdetail(product.product_id)">
@@ -44,16 +44,16 @@
                 <div style="color:#bdc3c7;font-size:15px;padding-left:15px;padding-top:5px;" @click="productdetail(product.product_id)">{{product.intro}}</div>
                 <div style="color:red;font-size:15px;padding:8px;" @click="productdetail(product.product_id)">¥ {{product.bid_price}}<el-tag type="success" size="small" style="float:right;">{{product.tags[0]}}</el-tag>
                 </div>
-
         </el-card>
-      <el-pagination
+
+    </div>
+    <el-pagination
         background
         :page-size="pageSize"
         layout="prev, pager, next"
         :total="totalCount" @current-change="currentChange"
-        style="position: absolute;bottom: 55px;left: 50%;transform: translateX(-50%);">
+        style="margin-left: 50%;transform: translateX(-50%);float:left;margin-top:100px;margin-bottom:100px;">
         </el-pagination>
-    </div>
     </section>
 </div>
 </template>
@@ -191,11 +191,10 @@ export default {
         width: 1000px;
     }
     .productList{
-        height: 2000px;
+        height: 100%;
         width: 1150px;
         margin-left: 50%;
         transform: translateX(-50%);
-        position: relative;
     }
     .search{
         position: absolute;

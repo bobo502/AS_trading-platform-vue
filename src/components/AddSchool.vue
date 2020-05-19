@@ -93,7 +93,7 @@ export default {
         margin-left: 50%;
         transform: translateX(-50%);
         width: 450px;
-        height: 1000px;
+        height: 700px;
     }
 
 </style>

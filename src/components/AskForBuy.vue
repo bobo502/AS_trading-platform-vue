@@ -24,7 +24,7 @@
                 :page-size="pageSize"
                 layout="prev, pager, next"
                 :total="totalCount" @current-change="currentChange"
-                style="position: absolute;bottom:15px;left: 50%;transform: translateX(-50%);">
+                style="position: absolute;bottom:45px;left: 50%;transform: translateX(-50%);">
             </el-pagination>
         </el-main>
     </el-container>
@@ -80,9 +80,8 @@ export default {
     .container{
         position: relative;
         width: 100%;
-        background-color: #ecf0f1;
         margin-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 100px;
     }
     .box{
         height: 230px;
